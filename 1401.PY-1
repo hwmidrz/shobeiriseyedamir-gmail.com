@@ -1,0 +1,14 @@
+def fact(n):
+    if(n<=1):
+        return 1
+    return n * fact(n-1)
+
+n = 20
+s = 0
+x = float(input('darage ra vared konid: '))
+pi = 3.1415
+x = x * pi/180
+for i in range(n):
+    s += ((-1) ** i) * ((x ** (2*i + 1)) / fact(2*i + 1))
+
+print('sinus', s)
