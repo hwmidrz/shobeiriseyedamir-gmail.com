@@ -1,0 +1,15 @@
+from math import log10
+def is_arm(n):
+    tool = int(log10(n)) + 1
+    s = 0
+    a = n
+    for i in range(tool):
+        r = a % 10
+        s += r ** tool
+        a //=10
+    return n == s
+
+
+for i in range(1 , 10001):
+    if(is_arm(i)):
+        print(i)
