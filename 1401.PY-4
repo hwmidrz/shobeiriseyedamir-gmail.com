@@ -1,0 +1,20 @@
+def j( x ):
+    return x * x * x - x * x + 2
+ 
+def m( x ):
+    return 3 * x * x - 2 * x
+ 
+
+def newton( x ):
+    h = j(x) / m(x)
+    while abs(h) >= 0.0001:
+        h = j(x)/m(x)
+        
+        x = x - h
+     
+    return x
+ 
+
+x0 = 10
+res = newton(x0)
+print('rishe = ',res)
